@@ -1,19 +1,26 @@
+// close result
 var closeResult = function (id) {
     var divElement = document.querySelector(`.result-${id}`)
     divElement.style.display = "none";
 }
+// close resultIteam
+
 var closeResultIteams = function (id) {
     var divElement = document.querySelector(`.div3-${id}`)
     divElement.style.display = "none";
 }
+// show loading
 var showLoading = function () {
     document.querySelector('.loader').classList.remove('hide')
 
 }
+// hide loading
+
 var hideLoading = function (x, y) {
 
     document.querySelector('.loader').classList.add('hide')
 }
+// show users
 var showUsers = function () {
 
     var xhttp = new XMLHttpRequest();
