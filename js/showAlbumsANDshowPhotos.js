@@ -1,9 +1,9 @@
-
-var showAlbums = function (obj) {
+//  show albums
+var showAlbums = function (id) {
     showLoading();
-    var text = `http://jsonplaceholder.typicode.com/users/${obj}/albums`;
+    var showAlbumsUrl = `http://jsonplaceholder.typicode.com/users/${id}/albums`;
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", text, true);
+    xhttp.open("GET", showAlbumsUrl, true);
 
     xhttp.onreadystatechange = function () {
         try {
@@ -28,8 +28,8 @@ var showAlbums = function (obj) {
             hideLoading();
         }
 
-        newElement = document.querySelector(`.div2-${obj}`);
-        newElement.innerHTML = ` <button onclick=closeDiv(${obj}) class="btn-div2">  close 
+        newElement = document.querySelector(`.div2-${id}`);
+        newElement.innerHTML = ` <button onclick=closeDiv(${id}) class="btn-div2">  close 
                           </button> ${element}`;
         ;
         newElement.style.display = "block";
@@ -37,11 +37,12 @@ var showAlbums = function (obj) {
 
     xhttp.send();
 };
-var showPhotos = function (obj) {
+// show photos 
+var showPhotos = function (id) {
     showLoading();
-    var text = `http://jsonplaceholder.typicode.com/albums/${obj}/photos`;
+    var showPotosUrl = `http://jsonplaceholder.typicode.com/albums/${id}/photos`;
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", text, true);
+    xhttp.open("GET", showPotosUrl, true);
 
     xhttp.onreadystatechange = function () {
         var x = [];
@@ -65,9 +66,9 @@ var showPhotos = function (obj) {
             hideLoading();
         }
 
-        newElement = document.querySelector(`.div3-${obj}`);
+        newElement = document.querySelector(`.div3-${id}`);
         newElement.innerHTML = `<br>
-        <button onclick=closeDiv2(${obj}) class="btn-div3">  close 
+        <button onclick=closeDiv2(${id}) class="btn-div3">  close 
                           </button> 
                            ${element}`;
         newElement.style.display = "block";

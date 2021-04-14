@@ -1,9 +1,10 @@
-var showPost = function (obj) {
+// show post
+var showPost = function (id) {
     showLoading()
 
-    var text = `http://jsonplaceholder.typicode.com/users/${obj}/posts`
+    var showPostUrl = `http://jsonplaceholder.typicode.com/users/${id}/posts`
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", text, true);
+    xhttp.open("GET", showPostUrl, true);
     xhttp.onreadystatechange = function () {
         try {
             if (xhttp.status != 200 && xhttp.readyState != 4) { throw (xhttp.status + "\n" + 'خطایی رخ داده') }
@@ -23,20 +24,21 @@ var showPost = function (obj) {
         finally {
             hideLoading()
         }
-        newElement = document.querySelector(`.div2-${obj}`);
-        newElement.innerHTML = ` <button onclick=closeDiv(${obj}) class="btn-div2">  close  </button> ${element}`;
+        newElement = document.querySelector(`.div2-${id}`);
+        newElement.innerHTML = ` <button onclick=closeDiv(${id}) class="btn-div2">  close  </button> ${element}`;
         newElement.style.display = "block";
     }
 
     xhttp.send()
 }
-var showComments = function (obj) {
+// show Comments 
+var showComments = function (id) {
     showLoading()
 
-    var text = `http://jsonplaceholder.typicode.com/posts/${obj}/comments`
+    var showCommentsUrl = `http://jsonplaceholder.typicode.com/posts/${id}/comments`
     var element = '';
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", text, true)
+    xhttp.open("GET", showCommentsUrl, true)
     xhttp.onreadystatechange = function () {
         var x = [];
         try {
@@ -60,9 +62,9 @@ var showComments = function (obj) {
 
         }
 
-        newElement = document.querySelector(`.div3-${obj} `);
+        newElement = document.querySelector(`.div3-${id} `);
         newElement.innerHTML = `<br>
-        <button onclick=closeDiv2(${obj}) class="btn-div3">  close 
+        <button onclick=closeDiv2(${id}) class="btn-div3">  close 
                           </button> 
                            ${element}`;
         newElement.style.display = "block";

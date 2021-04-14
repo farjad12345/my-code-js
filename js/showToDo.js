@@ -1,9 +1,9 @@
-
-var showToDo = function (obj) {
+//   show todos
+var showToDo = function (id) {
     showLoading();
-    var text = `http://jsonplaceholder.typicode.com/users/${obj}/todos`;
+    var showToDoUrl = `http://jsonplaceholder.typicode.com/users/${id}/todos`;
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", text, true);
+    xhttp.open("GET", showToDoUrl, true);
 
     xhttp.onreadystatechange = function () {
         try {
@@ -26,8 +26,8 @@ var showToDo = function (obj) {
             hideLoading();
         }
 
-        newElement = document.querySelector(`.div2-${obj}`);
-        newElement.innerHTML = ` <button onclick=closeDiv(${obj}) class="btn-div2">  close 
+        newElement = document.querySelector(`.div2-${id}`);
+        newElement.innerHTML = ` <button onclick=closeDiv(${id}) class="btn-div2">  close 
                           </button> ${element}`;
         ;
         newElement.style.display = "block";

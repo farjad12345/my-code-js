@@ -150,7 +150,7 @@ button:hover {
   display: none;
   padding: 8px;
   width: 100%;
-  height: 480px;
+  height: 460px;
   overflow: auto;
   position: relative;
 }
