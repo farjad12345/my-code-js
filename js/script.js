@@ -1,9 +1,9 @@
-var closeDiv = function (obj) {
-    var divElement = document.querySelector(`.div2-${obj}`)
+var closeDiv = function (هی) {
+    var divElement = document.querySelector(`.div2-${هی}`)
     divElement.style.display = "none";
 }
-var closeDiv2 = function (obj) {
-    var divElement = document.querySelector(`.div3-${obj}`)
+var closeDiv2 = function (هی) {
+    var divElement = document.querySelector(`.div3-${هی}`)
     divElement.style.display = "none";
 }
 var showLoading = function () {
