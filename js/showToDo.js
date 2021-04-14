@@ -26,8 +26,8 @@ var showToDo = function (id) {
             hideLoading();
         }
 
-        newElement = document.querySelector(`.div2-${id}`);
-        newElement.innerHTML = ` <button onclick=closeDiv(${id}) class="btn-div2">  close 
+        newElement = document.querySelector(`.result-${id}`);
+        newElement.innerHTML = ` <button onclick=closeResult(${id}) class="btn-result">  close 
                           </button> ${element}`;
         ;
         newElement.style.display = "block";

@@ -143,8 +143,8 @@ button:hover {
   padding: 10px;
 }
 
-.div2,
-.div3 {
+.result,
+.resultIteams {
   border: 5px solid rgba(124, 115, 115, 0.6);
   margin: 10px;
   display: none;
@@ -154,7 +154,7 @@ button:hover {
   overflow: auto;
   position: relative;
 }
-.div3 {
+.resultIteams {
   width: 95%;
   height: 300px;
 }
@@ -163,14 +163,14 @@ button:hover {
   justify-content: space-between;
   align-items: center;
 }
-.btn-div2,
-.btn-div3 {
+.btn-result,
+.btn-resultIteams {
   position: absolute;
   top: 0;
   right: 2%;
 }
 
-.div3 img,
+.resultIteams img,
 .div-img-thumb img {
   display: block;
   width: 100%;

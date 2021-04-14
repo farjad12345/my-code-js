@@ -1,9 +1,9 @@
-var closeDiv = function (هی) {
-    var divElement = document.querySelector(`.div2-${هی}`)
+var closeResult = function (id) {
+    var divElement = document.querySelector(`.result-${id}`)
     divElement.style.display = "none";
 }
-var closeDiv2 = function (هی) {
-    var divElement = document.querySelector(`.div3-${هی}`)
+var closeResultIteams = function (id) {
+    var divElement = document.querySelector(`.div3-${id}`)
     divElement.style.display = "none";
 }
 var showLoading = function () {
@@ -46,7 +46,7 @@ var showUsers = function () {
                    <button onclick="showAlbums(${element.id})">Show albums </button> 
                    </div> 
                   </br>
-                   <div class="div2 div2-${element.id}"></div>
+                   <div class="result result-${element.id}"></div>
 
                   </div > 
                          </div > `

@@ -14,7 +14,7 @@ var showPost = function (id) {
                 var element = '';
                 for (const i of x) {
                     element += (` id : ${i.id}<br> userId : ${i.userId} <br>  title : ${i.title} body :${i.body} 
-            <button onclick="showComments(${i.id})">show comments</button> <br/><div class="div3 div3-${i.id}"> </div><hr/>`);
+            <button onclick="showComments(${i.id})">show comments</button> <br/><div class="resultIteams resultIteams-${i.id}"> </div><hr/>`);
                 }
             }
         }
@@ -24,8 +24,8 @@ var showPost = function (id) {
         finally {
             hideLoading()
         }
-        newElement = document.querySelector(`.div2-${id}`);
-        newElement.innerHTML = ` <button onclick=closeDiv(${id}) class="btn-div2">  close  </button> ${element}`;
+        newElement = document.querySelector(`.result-${id}`);
+        newElement.innerHTML = ` <button onclick=closeResult(${id}) class="btn-result">  close  </button> ${element}`;
         newElement.style.display = "block";
     }
 
@@ -62,9 +62,9 @@ var showComments = function (id) {
 
         }
 
-        newElement = document.querySelector(`.div3-${id} `);
+        newElement = document.querySelector(`.resultIteams-${id} `);
         newElement.innerHTML = `<br>
-        <button onclick=closeDiv2(${id}) class="btn-div3">  close 
+        <button onclick=closeResultIteams(${id}) class="btn-resultIteams">  close 
                           </button> 
                            ${element}`;
         newElement.style.display = "block";

@@ -19,7 +19,7 @@ var showAlbums = function (id) {
                 for (const i of x) {
                     element += `id : ${i.id} <br> userId : ${i.userId} <br> title : ${i.title} 
                      <button onclick="showPhotos(${i.id} )"> photos </button><br> 
-                <div class="div3 div3-${i.id}"> </div> <hr>`;
+                <div class="resultIteams resultIteams-${i.id}"> </div> <hr>`;
                 }
             }
         } catch (err) {
@@ -28,8 +28,8 @@ var showAlbums = function (id) {
             hideLoading();
         }
 
-        newElement = document.querySelector(`.div2-${id}`);
-        newElement.innerHTML = ` <button onclick=closeDiv(${id}) class="btn-div2">  close 
+        newElement = document.querySelector(`.result-${id}`);
+        newElement.innerHTML = ` <button onclick=closeResult(${id}) class="btn-result">  close 
                           </button> ${element}`;
         ;
         newElement.style.display = "block";
@@ -66,9 +66,9 @@ var showPhotos = function (id) {
             hideLoading();
         }
 
-        newElement = document.querySelector(`.div3-${id}`);
+        newElement = document.querySelector(`.resultIteams-${id}`);
         newElement.innerHTML = `<br>
-        <button onclick=closeDiv2(${id}) class="btn-div3">  close 
+        <button onclick=closeResultIteams(${id}) class="btn-resultIteams">  close 
                           </button> 
                            ${element}`;
         newElement.style.display = "block";
