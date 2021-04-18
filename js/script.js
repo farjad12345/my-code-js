@@ -6,7 +6,7 @@ var closeResult = function (id) {
 // close resultIteam
 
 var closeResultIteams = function (id) {
-    var divElement = document.querySelector(`.div3-${id}`)
+    var divElement = document.querySelector(`.resultIteams-${id}`)
     divElement.style.display = "none";
 }
 // show loading
