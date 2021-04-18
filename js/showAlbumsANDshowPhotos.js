@@ -18,7 +18,7 @@ var showAlbums = function (id) {
 
                 for (const i of x) {
                     element += `id : ${i.id} <br> userId : ${i.userId} <br> title : ${i.title} 
-                     <button onclick="showPhotos(${i.id} )"> photos </button><br> 
+                    <br> <button onclick="showPhotos(${i.id} )"> photos </button><br> 
                 <div class="resultIteams resultIteams-${i.id}"> </div> <hr>`;
                 }
             }

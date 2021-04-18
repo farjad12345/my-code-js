@@ -14,7 +14,8 @@ var showPost = function (id) {
                 var element = '';
                 for (const i of x) {
                     element += (` id : ${i.id}<br> userId : ${i.userId} <br>  title : ${i.title} body :${i.body} 
-            <button onclick="showComments(${i.id})">show comments</button> <br/><div class="resultIteams resultIteams-${i.id}"> </div><hr/>`);
+           <br> <button onclick="showComments(${i.id})">show comments</button> 
+            <br><div class="resultIteams resultIteams-${i.id}"> </div><hr/>`);
                 }
             }
         }
