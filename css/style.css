@@ -108,7 +108,9 @@ body {
   color: black;
   background-color: rgba(192, 192, 192, 0.8);
 }
-
+.demo {
+  width: 100%;
+}
 .result,
 .resultIteams {
   border: 5px solid rgba(124, 115, 115, 0.6);

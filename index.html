@@ -1,50 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>final project with ajax</title>
+    <meta
+      name="description"
+      content="This is a project for a web design course using https://jsonplaceholder.typicode.com/"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>final-project-with-ajax</title>
-    <meta name="description"
-        content="This is a project for a web design course using https://jsonplaceholder.typicode.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- header -->
     <header class="header"></header>
     <!-- end of header -->
     <!-- main -->
     <main class="main">
-        <!-- loading -->
-        <div class="loader hide"></div>
-        <!-- end of loading -->
+      <!-- loading -->
+      <div class="loader hide"></div>
+      <!-- end of loading -->
 
-        <div class="container">
-            <button onclick="showUsers()" class="show-users"> Show Users</button>
-            <div class="demo "></div>
+      <div
+        class="border border-3 border-primary container w-100 d-flex justify-content-lg-between align-items-center flex-wrap"
+      >
+        <ul class="pagination w-100 d-flex justify-content-center m-2">
+          <li href="#" onclick="showUsers(0)" class="link-0 p-3">1</li>
+          <li href="#" onclick="showUsers(1)" class="link-1 p-3">2</li>
+          <li href="#" onclick="showUsers(2)" class="link-2 p-3">3</li>
+        </ul>
+        <div
+          class="serchBar border border-3 border-primary d-flex w-100 justify-content-center align-items-center form-group"
+        >
+          <label for="inp1">Please Enter ID: </label>
+          <input class="mr-1 px-2 form-control col-3" type="text" id="inp1" />
+          <button class="btn btn-primary" onclick="searchUser();">
+            click me
+          </button>
         </div>
+        <div class="demo d-flex flex-wrap justify-content-between"></div>
+      </div>
+      <!--  -->
     </main>
     <!-- footer -->
-    <footer class="footer">
-        <p>copy write <i class="fa fa-copyright"></i> 2021 by karyar</p>
+    <footer class="footer text-capitalize text-center">
+      <p>copy write <i class="fa fa-copyright"></i> 2021 by karyar</p>
     </footer>
     <!-- end of footer -->
 
- 
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script src="js/script.js"> </script>
-    <script src="js/showCommentsANDshowPost.js"> </script>
-    <script src="js/showToDo.js"> </script>
-    <script src="js/showAlbumsANDshowPhotos.js"> </script>
-
-</body>
-
+    <script src="js/script.js"></script>
+    <script src="js/showCommentsANDshowPost.js"></script>
+    <script src="js/showToDo.js"></script>
+    <script src="js/showAlbumsANDshowPhotos.js"></script>
+  </body>
 </html>
